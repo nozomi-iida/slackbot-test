@@ -21,9 +21,8 @@ function writeLog(text){
   
   let sheet1 = spreadSheet1.getSheetByName("シート1");
   Logger.log(text);
-  if(text.event.text.indexOf('@') != -1) {
-     sheet1.appendRow([new Date(), getUserName(text.event.user), text.event.text]); 
-  }
+
+  sheet1.appendRow([new Date(), getUserName(text.event.user), text.event.text]); 
 }
 
 
